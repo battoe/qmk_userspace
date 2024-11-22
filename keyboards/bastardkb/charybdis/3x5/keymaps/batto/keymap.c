@@ -63,9 +63,9 @@ static uint16_t auto_pointer_layer_timer = 0;
 // clang-format off
 /** \brief COLEMAK-DH layout (3 rows, 10 columns). */
 #define LAYOUT_LAYER_BASE                                                                     \
-       KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,    KC_J,    KC_L,    KC_U,    KC_Y,    FI_QUOT, \
-       KC_A,    KC_R,    KC_S,    KC_T,    KC_G,    KC_M,    KC_N,    KC_E,    KC_I,    KC_O, \
-       KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,    KC_K,    KC_H, KC_COMM,  KC_DOT, KC_SLSH, \
+       KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, \
+       KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,   FI_ADIA, \
+       KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT, FI_ODIA, \
                       ESC_MED, SPC_NAV, TAB_FUN, ENT_SYM, BSP_NUM
 
 /** Convenience row shorthands. */
@@ -125,7 +125,7 @@ static uint16_t auto_pointer_layer_timer = 0;
  * base layer to avoid having to layer change mid edit and to enable auto-repeat.
  */
 #define LAYOUT_LAYER_NAVIGATION                                                               \
-    _______________DEAD_HALF_ROW_______________, _______________DEAD_HALF_ROW_______________, \
+    _______________DEAD_HALF_ROW_______________, FI_EURO, FI_QUES, FI_LABK, FI_RABK, FI_ARNG, \
     ______________HOME_ROW_GACS_L______________, KC_CAPS, KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, \
     _______________DEAD_HALF_ROW_______________,  KC_INS, KC_HOME, KC_PGDN, KC_PGUP,  KC_END, \
                       XXXXXXX, _______, XXXXXXX,  KC_ENT, KC_BSPC
@@ -138,10 +138,10 @@ static uint16_t auto_pointer_layer_timer = 0;
  * `KC_DOT` is duplicated from the base layer.
  */
 #define LAYOUT_LAYER_NUMERAL                                                                  \
-    KC_LBRC,    KC_7,    KC_8,    KC_9, KC_RBRC, _______________DEAD_HALF_ROW_______________, \
-    KC_SCLN,    KC_4,    KC_5,    KC_6,  KC_EQL, ______________HOME_ROW_GACS_R______________, \
-     KC_GRV,    KC_1,    KC_2,    KC_3, KC_BSLS, _______________DEAD_HALF_ROW_______________, \
-                       KC_DOT,    KC_0, KC_MINS, XXXXXXX, _______
+    FI_LBRC,    KC_7,    KC_8,    KC_9, FI_RBRC, _______________DEAD_HALF_ROW_______________, \
+    FI_DLR,     KC_4,    KC_5,    KC_6,  FI_EQL, ______________HOME_ROW_GACS_R______________, \
+    FI_GRV,     KC_1,    KC_2,    KC_3, FI_BSLS, _______________DEAD_HALF_ROW_______________, \
+                       FI_SLSH,    KC_0, FI_MINS, XXXXXXX, _______
 
 /**
  * \brief Symbols layer.
@@ -151,10 +151,10 @@ static uint16_t auto_pointer_layer_timer = 0;
  * `KC_RPRN`.
  */
 #define LAYOUT_LAYER_SYMBOLS                                                                  \
-    KC_LCBR, KC_AMPR, KC_ASTR, KC_LPRN, KC_RCBR, _______________DEAD_HALF_ROW_______________, \
-    KC_COLN,  KC_DLR, KC_PERC, KC_CIRC, KC_PLUS, ______________HOME_ROW_GACS_R______________, \
-    KC_TILD, KC_EXLM,   KC_AT, KC_HASH, KC_PIPE, _______________DEAD_HALF_ROW_______________, \
-                      KC_LPRN, KC_RPRN, KC_UNDS, _______, XXXXXXX
+    FI_LCBR, FI_AMPR, FI_ASTR, FI_LPRN, FI_RCBR, _______________DEAD_HALF_ROW_______________, \
+    FI_DQUO, FI_DLR,  FI_PERC, FI_CIRC, FI_PLUS, ______________HOME_ROW_GACS_R______________, \
+    FI_TILD, FI_EXLM,   FI_AT, FI_HASH, FI_PIPE, _______________DEAD_HALF_ROW_______________, \
+                      FI_LPRN, FI_RPRN, FI_UNDS, _______, XXXXXXX
 
 /**
  * \brief Add Home Row mod to a layout.
